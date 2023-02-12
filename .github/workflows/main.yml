@@ -71,7 +71,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
-          password: ${{ secrets.SERVER_PASSWORD }}
+          passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             sudo docker pull ${{ secrets.USER }}/infra_actions:v1.0.2023
             sudo docker stop $(sudo docker ps -a -q)
